@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Jost",sans-serif;
+}
+
+a,h2,h3 {
+    color: #BAFF29;
+}
+
+body {
+    margin: 0;
+    margin-top: -60px;
+    width: 100%;
+    min-height: 100svh;
+    background: #0a0a1d;
+    color: #EEF;
+}
+
+.Navbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    background: #1A1341BB;
+    backdrop-filter: blur(10px) saturate(2);
+    z-index: 99999;
+    box-shadow: 0px 0px 10px 0px #0004;
+    border-bottom: 1px solid #EEF1;
+}
+
+.Navbar h2 {
+    margin: 0;
+    color: #BAFF29;
+}
+
+.Navbar ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.Navbar ul li {
+    list-style: none;
+}
+
+.Navbar ul li a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    padding: 0.2rem 0.4rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+
+    &:hover {
+        color: #0a0a1d;
+    }
+}
+
+.Navbar ul li a::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #EEF;
+    border-radius: 0.4rem;
+    transition: all 0.3s ease;
+    z-index: -1;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.Navbar ul li a:hover::after {
+    width: 100%;
+    height: 100%;
+    background: #BAFF29;
+}
+
+.Hero-Section {
+    background-image: linear-gradient(#0a0a1d77,#0a0a1dFF), url("https://images.alphacoders.com/135/1358310.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100svh - 60px);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+
+    & h1 {
+        margin-top: 0;
+    }
+}
+
+section {
+    padding: 60px 30px;
+    padding-bottom: 0;
+    width: calc(100% - 350px);
+    display: flex;
+    flex-direction: column;
+}
+
+aside {
+    position: sticky;
+    top: 0;
+    bottom: calc(100% - 450px);
+    left: calc(100% - 350px);
+    width: 350px;
+    padding: 60px 30px;
+    color: #BBD;
+}
+
+footer {
+    padding: 30px;
+    background: #1A1341BB;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+section table {
+    border-collapse: collapse;
+    border-color: #FFF3;
+}
+
+section table *{
+    padding: 10px;
+}
+
+section table tr :not(:first-child) {
+    text-align: center;
+}
+
+input, textarea {
+    width: 100%;
+    border-radius: 0.2rem;
+    padding: 0.5rem 0.5rem;
+    border: none !important;
+    outline: none !important;
+    -webkit-border-radius: 0.2rem;
+    -moz-border-radius: 0.2rem;
+    -ms-border-radius: 0.2rem;
+    -o-border-radius: 0.2rem;
+}
+
+fieldset {
+    padding: 0 2rem;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+fieldset legend {
+    padding: 1rem;
+}
+fieldset label {
+    margin-bottom: 0.5rem;
+}
+fieldset div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 2rem;
+    margin-bottom: 1.6rem;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: -180px;
+}
+
+#about ul, #service ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    width: fit-content;
+    overflow: hidden;
+}
+
+#about ul li, #service ol li{
+    /* list-style: none; */
+    position: relative;
+}
+
+#about .about-images, #service .service-images {
+    width: 280px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    aspect-ratio: calc(16 / 9);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#gallery figure {
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+}
+
+#gallery figure figcaption{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    color: #0a0a1d;
+    background: #BAFF29BB;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 10px 10px;
+    transition: all 0.3s ease;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+#gallery figure:hover figcaption {
+    height: 100%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#gallery figure img {
+    max-width: 680px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    aspect-ratio: calc(16 / 9);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+#about ul li div:not(.about-images), #service ol li div:not(.service-images){
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;
+    color: #0a0a1d;
+    background: #BAFF29BB;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+}
+
+fieldset div input {
+    width: fit-content;
+}
+
+@media screen and (max-width: 1000px) {
+    aside {
+        position: relative;
+        left: auto;
+    }
+    main {
+        margin-bottom: auto;
+    }
+    section {
+        width: 100%;
+    }
+    .Hero-Section {
+        & h1{
+            font-size: 2.2rem;
+            text-align: center;
+        }
+        & p{
+            font-size: 1.1rem;
+            text-align: center;
+        }
+    }
+    body {
+        margin: 0;
+    }
+    .Navbar {
+        flex-direction: column;
+        height: auto;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+
+        & ul {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+        }
+
+        & h2 {
+            font-size: 2rem;
+            padding-top: 1rem;
+        }
+    }
+    #about ul, #service ol {
+        margin: auto;
+        grid-template-columns: 1fr;
+    }
+    #gallery figure {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #about .about-images, #service .service-images {
+        width: 200px;
+    }
+    fieldset div {
+        flex-direction: column;
+        height: auto;
+        gap: 1rem;
+        & input {
+            width: 100%;
+        }
+        & br {
+            display: none;
+        }
+    }
+    #about ul li div:not(.about-images), #service ol li div:not(.service-images) {
+        font-size: 0.8rem;
+    }
+}

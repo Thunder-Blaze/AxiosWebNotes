@@ -5,28 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprehensive HTML Page</title>
+    <link rel="stylesheet" href="./CSS/index.css">
 </head>
 <body>
 
-    <!-- Header Section -->
-    <header>
-        <h1>Welcome to the Comprehensive HTML Page</h1>
-        <p>This page demonstrates the use of various HTML elements, including semantic tags, forms, tables, multimedia, and more.</p>
-    </header>
-
     <!-- Navigation -->
-    <nav>
-        <h2>Navigation</h2>
+    <nav class="Navbar">
+        <h2>HTML Docs</h2>
         <ul>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#service">Services</a></li>
             <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="index.html">Home</a></li>
             <li><a href="inputs.html">Input Form Page</a></li>
             <li><a href="tables.html">Complex Table Page</a></li>
         </ul>
     </nav>
+    
+    <!-- Header Section -->
+    <header class="Hero-Section">
+        <h1>Welcome to the Comprehensive HTML Page</h1>
+        <p>This page demonstrates the use of various HTML elements, including semantic tags, forms, tables, multimedia, and more.</p>
+    </header>
 
     <!-- Main Content Section -->
     <main>
@@ -37,22 +38,54 @@
                 <p>We are a leading company in delivering quality web development services. Our mission is to enhance user experiences with cutting-edge technology.</p>
                 <p>Here are some of the things we believe in:</p>
                 <ul>
-                    <li>Innovation</li>
-                    <li>Quality</li>
-                    <li>Customer Satisfaction</li>
-                    <li>Continuous Improvement</li>
+                    <li>
+                        <div style="background-image: url(https://thumbs.dreamstime.com/b/abstract-creative-polygonal-colorful-light-bulb-background-innovation-creativity-concept-d-rendering-innovation-creativity-105098069.jpg);" class="about-images"></div>
+                        <div>
+                            Innovation
+                        </div>
+                    </li>
+                    <li>
+                        <div style="background-image: url(https://img.freepik.com/premium-photo/colorful-feather-background-with-detailed-hands-fingers-highquality-stock-photography_1252915-22828.jpg);" class="about-images"></div>
+                        <div>
+                            Quality
+                        </div>
+                    </li>
+                    <li>
+                        <div style="background-image: url(https://wallpapers.com/images/hd/customer-pressing-knowing-he2a0ruvxnxkdcwq.jpg);" class="about-images"></div>
+                        <div>
+                            Customer Satisfaction
+                        </div>
+                    </li>
+                    <li>
+                        <div style="background-image: url(https://www.shutterstock.com/image-photo/make-things-better-improvement-concept-260nw-546452842.jpg);" class="about-images"></div>
+                        <div>
+                            Continuous Improvement
+                        </div>
+                    </li>
                 </ul>
             </section>
 
             <!-- Services Section -->
-            <section id="services">
+            <section id="service">
                 <h2>Our Services</h2>
                 <p>We offer a wide range of services, including:</p>
                 <ol>
-                    <li>Web Development</li>
-                    <li>Mobile App Development</li>
-                    <li>Cloud Computing Solutions</li>
-                    <li>AI & Machine Learning Integration</li>
+                    <li>
+                        <div style="background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20231004/pngtree-a-conceptual-illustration-of-web-design-development-and-seo-optimization-in-image_13584944.png);" class="service-images"></div>
+                        <div>Web Development</div>
+                    </li>
+                    <li>
+                        <div style="background-image: url(https://img.freepik.com/free-vector/app-development-banner_33099-1720.jpg);" class="service-images"></div>
+                        <div>Mobile App Development</div>
+                    </li>
+                    <li>
+                        <div style="background-image: url(https://t4.ftcdn.net/jpg/05/07/66/23/360_F_507662376_BTKmPlIGBvKlRHWKRNeFt7bj7H2SynQm.jpg);" class="service-images"></div>
+                        <div>Cloud Computing Solutions</div>
+                    </li>
+                    <li>
+                        <div style="background-image: url(https://media.istockphoto.com/id/966248982/photo/robot-with-education-hud.jpg?s=612x612&w=0&k=20&c=9eoZYRXNZsuU3edU87PksxN4Us-c9rB6IR7U_IGZ-U8=);" class="service-images"></div>
+                        <div>AI & Machine Learning Integration</div>
+                    </li>
                 </ol>
             </section>
 
@@ -99,12 +132,12 @@
             <h2>Gallery</h2>
             <p>Check out some of our work:</p>
             <figure>
-                <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+                <img src="https://sourcebae.com/blog/wp-content/uploads/2023/09/project-planning-header@2x-678x381-1.png" alt="Placeholder Image">
                 <figcaption>Our Recent Project</figcaption>
             </figure>
 
             <figure>
-                <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+                <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/project_management_coursefees.jpg" alt="Placeholder Image">
                 <figcaption>Another Successful Project</figcaption>
             </figure>
         </section>
@@ -123,53 +156,56 @@
                 Your browser does not support the audio element.
             </audio>
         </section>
+        
+        <!-- Form Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="/submit" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required><br><br>
+    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+    
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required><br><br>
+                </fieldset>
+    
+                <fieldset>
+                    <legend>Message</legend>
+                    <label for="message">Your Message:</label><br>
+                    <textarea id="message" name="message" rows="5" cols="40" required></textarea><br>
+    
+                    <div>
+                        <label for="services">Interested in:</label><br>
+                        <select id="services" name="services">
+                            <option value="web-development">Web Development</option>
+                            <option value="mobile-app">Mobile App Development</option>
+                            <option value="cloud">Cloud Solutions</option>
+                            <option value="ai">AI Integration</option>
+                        </select><br><br>
+        
+                        <input type="submit" value="Submit">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        
+        <!-- Aside Section -->
+        <aside>
+            <h2>Latest News</h2>
+            <p>We have recently launched a new AI-driven platform that enhances user experiences!</p>
+    
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Webinar on AI - Sept 30, 2024</li>
+                <li>Workshop on Cloud Computing - Oct 15, 2024</li>
+            </ul>
+        </aside>
     </main>
 
-    <!-- Form Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="/submit" method="post">
-            <fieldset>
-                <legend>Personal Information</legend>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br><br>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required><br><br>
-            </fieldset>
-
-            <fieldset>
-                <legend>Message</legend>
-                <label for="message">Your Message:</label><br>
-                <textarea id="message" name="message" rows="5" cols="40" required></textarea><br><br>
-
-                <label for="services">Interested in:</label><br>
-                <select id="services" name="services">
-                    <option value="web-development">Web Development</option>
-                    <option value="mobile-app">Mobile App Development</option>
-                    <option value="cloud">Cloud Solutions</option>
-                    <option value="ai">AI Integration</option>
-                </select><br><br>
-
-                <input type="submit" value="Submit">
-            </fieldset>
-        </form>
-    </section>
-
-    <!-- Aside Section -->
-    <aside>
-        <h2>Latest News</h2>
-        <p>We have recently launched a new AI-driven platform that enhances user experiences!</p>
-
-        <h2>Upcoming Events</h2>
-        <ul>
-            <li>Webinar on AI - Sept 30, 2024</li>
-            <li>Workshop on Cloud Computing - Oct 15, 2024</li>
-        </ul>
-    </aside>
 
     <!-- Footer Section -->
     <footer>
